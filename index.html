@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courier Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Courier Management System</h1>
+    </header>
+
+    <div class="container">
+        <div class="login-section">
+            <h2>User Login</h2>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="form-group">
+                <button type="button" onclick="login()">Login</button>
+            </div>
+        </div>
+
+        <div class="tracking-section">
+            <h2>Track Your Package</h2>
+            <div class="form-group">
+                <label for="tracking-number">Tracking Number</label>
+                <input type="text" id="tracking-number" name="tracking-number">
+            </div>
+            <div class="form-group">
+                <button type="button" onclick="trackPackage()">Track</button>
+            </div>
+            <div class="form-group">
+                <table id="tracking-result">
+                    <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Location</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Tracking result will be displayed here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="admin-panel">
+            <h2>Admin Panel</h2>
+            <div class="form-group">
+                <button type="button" onclick="addCourier()">Add Courier</button>
+                <button type="button" onclick="manageDeliveries()">Manage Deliveries</button>
+            </div>
+            <div class="form-group">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Courier ID</th>
+                            <th>Courier Name</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Courier list will be displayed here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
